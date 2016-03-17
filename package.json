@@ -1,0 +1,34 @@
+{
+  "name": "websheets-core",
+  "version": "0.1.0",
+  "description": "Back-end components for websheets",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.6.0",
+    "mocha": "^2.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebSheets/websheets-core.git"
+  },
+  "keywords": [
+    "spreadsheets",
+    "websheets"
+  ],
+  "author": "Matt Basta <me@mattbasta.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebSheets/websheets-core/issues"
+  },
+  "homepage": "https://github.com/WebSheets/websheets-core#readme",
+  "dependencies": {
+    "formulajs": "git://github.com/CrowdProcess/formula.js#master"
+  }
+}
