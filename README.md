@@ -1,6 +1,6 @@
 # Websheets Core
 
-[![Build Status](https://travis-ci.org/mattbasta/websheets-core.svg?branch=master)](https://travis-ci.org/mattbasta/websheets-core)
+[![Build Status](https://travis-ci.org/WebSheets/websheets-core.svg?branch=master)](https://travis-ci.org/WebSheets/websheets-core)
 
 An experimental spreadsheet engine in JS for the browser and Node.
 
