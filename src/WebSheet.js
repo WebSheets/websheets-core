@@ -274,7 +274,6 @@ export default class WebSheet {
     popColumn() {
         if (this.width < 2) throw new Error('Cannot make spreadsheet that small');
         this.width -= 1;
-        this.columnWidths.pop();
         for (let i = 0; i < this.height; i++) {
             if (this.data[i] && this.data[i].length > this.width) this.data[i].pop();
             if (this.calculated[i] && this.calculated[i].length > this.width) this.calculated[i].pop();
@@ -294,7 +293,6 @@ export default class WebSheet {
         if (idx < 0 || idx >= this.width) throw new Error('Removing cells that do not exist');
 
         this.width -= 1;
-        this.columnWidths.splice(idx, 1);
         for (let i = 0; i < this.height; i++) {
             if (this.data[i]) this.data[i].splice(idx, 1);
             if (this.calculated[i]) this.calculated[i].splice(idx, 1);
