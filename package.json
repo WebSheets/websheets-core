@@ -4,7 +4,9 @@
   "description": "Back-end components for websheets",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "build": "./node_modules/.bin/babel src --out-dir build --source-maps --no-babelrc --presets es2015",
+    "prepublish": "rm -rf build/* && npm run build",
+    "test": "./node_modules/.bin/mocha --recursive"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
