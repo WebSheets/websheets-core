@@ -21,10 +21,7 @@ const defaultParams = {
 const WINDOW_MOUSEUP = Symbol('window.onmouseup');
 
 export default class WebSheet {
-    constructor(elem, params = {}) {
-        this.elem = elem;
-        this.elem.className = 'websheet';
-
+    constructor(params = {}) {
         Object.assign(this, defaultParams, params);
 
         this.data = [];
