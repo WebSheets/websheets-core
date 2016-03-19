@@ -7,7 +7,7 @@ describe('WebSheet', () => {
     describe('loadData', () => {
 
         it('should insert content in the correct positions', () => {
-            const sheet = new WebSheet({}, {noBrowser: true});
+            const sheet = new WebSheet();
             sheet.loadData([[1, 2, 3]]);
             assert.equal(sheet.getCalculatedValueAtID('a1'), 1);
             assert.equal(sheet.getCalculatedValueAtID('b1'), 2);
@@ -27,7 +27,7 @@ describe('WebSheet', () => {
     describe('getCalculatedValueAtID', () => {
 
         it('should deal with calculated values that are falsey but not nullish', () => {
-            const sheet = new WebSheet({}, {noBrowser: true});
+            const sheet = new WebSheet();
             sheet.loadData([
                 [
                     '=10-10',
@@ -42,7 +42,7 @@ describe('WebSheet', () => {
     describe('cycle detection', () => {
 
         it('should allow cycles to be banned by setting iterate to false', () => {
-            const sheet = new WebSheet({}, {noBrowser: true, iterate: false});
+            const sheet = new WebSheet({iterate: false});
 
             let hitCycle = false;
             sheet.console.on('error', err => {
@@ -63,8 +63,7 @@ describe('WebSheet', () => {
         });
 
         it('should hit the iteration limit softly', () => {
-            const sheet = new WebSheet({}, {
-                noBrowser: true,
+            const sheet = new WebSheet({
                 iterate: true,
                 maxIterations: 3,
             });
@@ -89,8 +88,7 @@ describe('WebSheet', () => {
         });
 
         it('should stop iterating once the delta falls below the epsilon', () => {
-            const sheet = new WebSheet({}, {
-                noBrowser: true,
+            const sheet = new WebSheet({
                 iterate: true,
                 iterationEpsilon: 0.001,
                 maxIterations: 20,
