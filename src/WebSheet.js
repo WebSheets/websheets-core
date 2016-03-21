@@ -1,7 +1,7 @@
 import Emitter from './Emitter';
 import {getCellID, getCellPos} from './cellID';
-import parseExpression from './exprCompiler';
-import {parseNumMaybe} from './exprCompiler/functions';
+import parseExpression from 'websheets-engine';
+import {parseNumMaybe} from './utils';
 
 
 const defaultParams = {

@@ -1,6 +1,6 @@
 import Emitter from './Emitter';
 import {getCellID, getCellPos} from './cellID';
-import parseExpression from './exprCompiler';
+import parseExpression from 'websheets-engine';
 import WebSheet from './WebSheet';
 import WebSheetContext from './WebSheetContext';
 
