@@ -99,7 +99,7 @@ describe('WebSheet', () => {
                 hitLimit = true;
             });
 
-            // This sheet will calculate off into infinity and never reach equilibrium.
+            // This sheet will converge on a value.
             sheet.loadData([
                 ['=a2*0.7'],
                 ['=A3'],
