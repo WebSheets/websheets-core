@@ -1,6 +1,6 @@
 {
   "name": "websheets-core",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Back-end components for websheets",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/WebSheets/websheets-core#readme",
   "dependencies": {
-    "websheets-engine": "^0.1.0"
+    "websheets-engine": "^0.2.0"
   }
 }
